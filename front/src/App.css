@@ -15,8 +15,10 @@
     justify-content: center !important;
     align-items: center !important;
 }
-.chevignon{
-    width: 20%;
+
+.americaneagle, .nafnaf, .rifle, .esprit, .chevignon, .americanino{
+    width: 10%;
+    height: 10%;
 }
 
 .casillas{
@@ -27,8 +29,16 @@ input{
     text-align: center;
 }
 
+@keyframes animar {
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+  }
 main{
-    background-color: aqua;
+    background: linear-gradient(45deg,  #756e6e, #4e4c4c, #c9bfbc, #756e6e, #4e4c4c);
+  background-size: 300% 300%;
+  position: relative;
+  animation: animar 7s ease infinite;
     height: 617px !important;
     width: 100% !important;
     display: flex !important;
