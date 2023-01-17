@@ -1,86 +1,109 @@
 const FormularioCliente = () => {
   return (
-    <form>
-      <fieldset>
-        
-      <section className="tituloCasilla form-group">
-        <label className="control-label">tipo de identificacion</label>
-        <select className="form-control" id="tipoDeIdentificacion">
-          <option className="casillas" defaultValue>-seleccionar-</option>
+    <form class="row g-3 w-70 col-12">
+      <section class="col-md-6">
+        <label class="form-label">
+        tipo de identificacion
+        </label>
+        <select class="form-select" id="tipoIdentificacion" required>
+          <option selected disabled value="" className="casillas">
+           -seleccionar-
+          </option>
           <option className="casillas" value="CC">Cedula</option>
           <option className="casillas" value="TI">Tarjeta de identidad</option>
           <option className="casillas" value="CE">Cedula de extranjeria</option>
         </select>
       </section>
 
-      <section className="tituloCasilla form-group">
-        <label className="control-label">numero de identificacion</label>
+      <section class="col-md-6">
+        <label class="form-label">
+        numero de identificacion
+        </label>
         <input
           type="text"
-          className="form-control"
+          class="form-control"
           id="numeroDeIdentificacion"
           name="numeroDeIdentificacion"
           placeholder="##########"
+          required
         />
       </section>
 
-      <section className="tituloCasilla form-group">
-        <label className="control-label">nombre</label>
+      <section class="col-md-6">
+        <label class="form-label">
+          nombre
+        </label>
         <input
           type="text"
-          className="form-control"
+          class="form-control"
           id="nombre"
           name="nombre"
           placeholder="John"
+          required
         />
       </section>
 
-      <section className="tituloCasilla form-group">
-        <label className="control-label">apellido</label>
+      <section class="col-md-6">
+        <label class="form-label">
+          apellido
+        </label>
         <input
           type="text"
-          className="form-control"
+          class="form-control"
           id="apellido"
           name="apellido"
           placeholder="uribe"
+          required
         />
       </section>
 
-      <section className="tituloCasilla form-group">
-        <label className="control-label">fecha de nacimiento</label>
+      <section class="col-md-6">
+        <label class="form-label">
+        fecha de nacimiento
+        </label>
         <input
           type="date"
-          className="casillas form-control"
+          class="form-control"
           id="fechaDeNacimiento"
           name="fechaDeNacimiento"
+          required
         />
       </section>
-      </fieldset>
 
-      <fieldset>
-      <section className="tituloCasilla form-group">
-        <label className="control-label">direccion</label>
+      <section class="col-md-6">
+        <label class="form-label">
+        direccion
+        </label>
         <input
           type="text"
-          className="form-control"
+          class="form-control"
           id="direccion"
           name="direccion"
           placeholder="calle 75a sur #44-25"
+          required
         />
       </section>
 
-      <section className="tituloCasilla form-group">
-        <label className="control-label">pais</label>
-        <select className="form-control" id="pais">
-          <option className="casillas" value="">-seleccionar-</option>
+      <section class="col-md-3">
+        <label class="form-label">
+          pais
+        </label>
+        <select class="form-select" id="pais" required>
+          <option selected disabled value=""  className="casillas">
+          -seleccionar-
+          </option>
           <option className="casillas" value="colombia">colombia</option>
         </select>
       </section>
 
-      <section className="tituloCasilla form-group">
-        <label className="control-label">departamento</label>
-        <select className="form-control" id="departamento">
-          <option className="casillas" value="">-seleccionar-</option>
+      <section class="col-md-3">
+        <label class="form-label">
+        departamento
+        </label>
+        <select class="form-select" id="departamento" required>
+          <option selected disabled value=""  className="casillas">
+          -seleccionar-
+          </option>
           <option className="casillas" value="Amazonas">Amazonas</option>
           <option className="casillas" value="Antioquia">Antioquia</option>
           <option className="casillas" value="Arauca">Arauca</option>
@@ -118,10 +141,14 @@ const FormularioCliente = () => {
         </select>
       </section>
 
-      <section className="tituloCasilla form-group">
-        <label className="control-label">ciudad</label>
-        <select className="form-control" id="ciudad">
-          <option className="casillas" value="">-seleccionar-</option>
+      <section class="col-md-3">
+        <label class="form-label">
+        ciudad
+        </label>
+        <select class="form-select" id="ciudad" required>
+          <option selected disabled value=""  className="casillas">
+          -seleccionar-
+          </option>
           <option className="casillas" value="Arauca">Arauca</option>
           <option className="casillas" value="Armenia">Armenia</option>
           <option className="casillas" value="Barranquilla">Barranquilla</option>
@@ -157,10 +184,14 @@ const FormularioCliente = () => {
         </select>
       </section>
 
-      <section className="tituloCasilla form-group">
-        <label className="control-label">marca</label>
-        <select className="form-control" id="marca">
-          <option className="casillas" value="">-seleccionar-</option>
+      <section class="col-md-3">
+        <label class="form-label">
+        marca
+        </label>
+        <select class="form-select" id="marca" required>
+          <option selected disabled value=""  className="casillas">
+          -seleccionar-
+          </option>
           <option className="casillas" value="Americanino">Americanino</option>
           <option className="casillas" value="American Eagle">American Eagle</option>
           <option className="casillas" value="Chevignon">Chevignon</option>
@@ -169,12 +200,10 @@ const FormularioCliente = () => {
           <option className="casillas" value="rifle">rifle</option>
         </select>
       </section>
-      </fieldset>
-    
-
-      <section className="tituloCasilla form-group">
-        <button type="submit" className="btn btn-primary">
-          Registrarse
+      
+      <section class="col-12 d-flex justify-content-center">
+        <button class="btn btn-primary" type="submit">
+          Registrar
         </button>
       </section>
     </form>

@@ -1,10 +1,13 @@
-
-import './App.css';
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Main from './components/layouts/Main';
+import Main from "./components/layouts/Main";
+import Menu from "./components/helpers/Menu";
 function App() {
   return (
-    <Main/>
+    <section>
+      <Menu />
+      <Main />
+    </section>
   );
 }
 

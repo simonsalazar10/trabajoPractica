@@ -1,11 +1,43 @@
-::placeholder{
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+.tituloPrincipal{
+    font-family: 'Playfair Display SC', serif;
+    font-size: 300%;
+    display: flex;
+    justify-content: center;
+    background-color: #042340;
+    color: white;
 }
-
-.tituloCasilla{
-    text-align: center;
+.header{
+    width: 100% !important;
+    height: 20% !important;
+    background-color: #042340;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.chevignon{
+    width: 20%;
 }
 
 .casillas{
     text-align: center;
+}
+
+input{
+    text-align: center;
+}
+
+main{
+    background-color: aqua;
+    height: 617px !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+form{
+    background-color: blueviolet;
+    width: 55% !important;
 }
