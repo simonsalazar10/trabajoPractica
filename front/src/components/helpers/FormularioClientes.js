@@ -1,17 +1,19 @@
 const FormularioCliente = () => {
   return (
     <form>
-      <section className="form-group">
+      <fieldset>
+        
+      <section className="tituloCasilla form-group">
         <label className="control-label">tipo de identificacion</label>
         <select className="form-control" id="tipoDeIdentificacion">
-          <option defaultValue>-seleccionar-</option>
-          <option value="CC">Cedula</option>
-          <option value="TI">Tarjeta de identidad</option>
-          <option value="CE">Cedula de extranjeria</option>
+          <option className="casillas" defaultValue>-seleccionar-</option>
+          <option className="casillas" value="CC">Cedula</option>
+          <option className="casillas" value="TI">Tarjeta de identidad</option>
+          <option className="casillas" value="CE">Cedula de extranjeria</option>
         </select>
       </section>
 
-      <section className="form-group">
+      <section className="tituloCasilla form-group">
         <label className="control-label">numero de identificacion</label>
         <input
           type="text"
@@ -22,7 +24,7 @@ const FormularioCliente = () => {
         />
       </section>
 
-      <section className="form-group">
+      <section className="tituloCasilla form-group">
         <label className="control-label">nombre</label>
         <input
           type="text"
@@ -33,7 +35,7 @@ const FormularioCliente = () => {
         />
       </section>
 
-      <section className="form-group">
+      <section className="tituloCasilla form-group">
         <label className="control-label">apellido</label>
         <input
           type="text"
@@ -44,17 +46,19 @@ const FormularioCliente = () => {
         />
       </section>
 
-      <section className="form-group">
+      <section className="tituloCasilla form-group">
         <label className="control-label">fecha de nacimiento</label>
         <input
           type="date"
-          className="form-control"
+          className="casillas form-control"
           id="fechaDeNacimiento"
           name="fechaDeNacimiento"
         />
       </section>
+      </fieldset>
 
-      <section className="form-group">
+      <fieldset>
+      <section className="tituloCasilla form-group">
         <label className="control-label">direccion</label>
         <input
           type="text"
@@ -65,110 +69,110 @@ const FormularioCliente = () => {
         />
       </section>
 
-      <section className="form-group">
+      <section className="tituloCasilla form-group">
         <label className="control-label">pais</label>
         <select className="form-control" id="pais">
-          <option value="">-seleccionar-</option>
-          <option value="colombia">colombia</option>
+          <option className="casillas" value="">-seleccionar-</option>
+          <option className="casillas" value="colombia">colombia</option>
         </select>
       </section>
 
-      <section className="form-group">
+      <section className="tituloCasilla form-group">
         <label className="control-label">departamento</label>
         <select className="form-control" id="departamento">
-          <option value="">-seleccionar-</option>
-          <option value="Amazonas">Amazonas</option>
-          <option value="Antioquia">Antioquia</option>
-          <option value="Arauca">Arauca</option>
-          <option value="Atlántico">Atlántico</option>
-          <option value="Bolívar">Bolívar</option>
-          <option value="Boyacá">Boyacá</option>
-          <option value="Caldas">Caldas</option>
-          <option value="Caquetá">Caquetá</option>
-          <option value="Casanare">Casanare</option>
-          <option value="Cauca">Cauca</option>
-          <option value="Cesar">Cesar</option>
-          <option value="Chocó">Chocó</option>
-          <option value="Córdoba">Córdoba</option>
-          <option value="Cundinamarca">Cundinamarca</option>
-          <option value="Guainía">Guainía</option>
-          <option value="Guaviare">Guaviare</option>
-          <option value="Huila">Huila</option>
-          <option value="La Guajira">La Guajira</option>
-          <option value="Magdalena">Magdalena</option>
-          <option value="Meta">Meta</option>
-          <option value="Nariño">Nariño</option>
-          <option value="Norte de Santander">Norte de Santander</option>
-          <option value="Putumayo">Putumayo</option>
-          <option value="Quindío">Quindío</option>
-          <option value="Risaralda">Risaralda</option>
-          <option value="San Andrés y Providencia">
+          <option className="casillas" value="">-seleccionar-</option>
+          <option className="casillas" value="Amazonas">Amazonas</option>
+          <option className="casillas" value="Antioquia">Antioquia</option>
+          <option className="casillas" value="Arauca">Arauca</option>
+          <option className="casillas" value="Atlántico">Atlántico</option>
+          <option className="casillas" value="Bolívar">Bolívar</option>
+          <option className="casillas" value="Boyacá">Boyacá</option>
+          <option className="casillas" value="Caldas">Caldas</option>
+          <option className="casillas" value="Caquetá">Caquetá</option>
+          <option className="casillas" value="Casanare">Casanare</option>
+          <option className="casillas" value="Cauca">Cauca</option>
+          <option className="casillas" value="Cesar">Cesar</option>
+          <option className="casillas" value="Chocó">Chocó</option>
+          <option className="casillas" value="Córdoba">Córdoba</option>
+          <option className="casillas" value="Cundinamarca">Cundinamarca</option>
+          <option className="casillas" value="Guainía">Guainía</option>
+          <option className="casillas" value="Guaviare">Guaviare</option>
+          <option className="casillas" value="Huila">Huila</option>
+          <option className="casillas" value="La Guajira">La Guajira</option>
+          <option className="casillas" value="Magdalena">Magdalena</option>
+          <option className="casillas" value="Meta">Meta</option>
+          <option className="casillas" value="Nariño">Nariño</option>
+          <option className="casillas" value="Norte de Santander">Norte de Santander</option>
+          <option className="casillas" value="Putumayo">Putumayo</option>
+          <option className="casillas" value="Quindío">Quindío</option>
+          <option className="casillas" value="Risaralda">Risaralda</option>
+          <option className="casillas" value="San Andrés y Providencia">
             San Andrés y Providencia
           </option>
-          <option value="Santander">Santander</option>
-          <option value="Sucre">Sucre</option>
-          <option value="Tolima">Tolima</option>
-          <option value="Valle del Cauca">Valle del Cauca</option>
-          <option value="Vaupés">Vaupés</option>
-          <option value="Vichada">Vichada</option>
+          <option className="casillas" value="Santander">Santander</option>
+          <option className="casillas" value="Sucre">Sucre</option>
+          <option className="casillas" value="Tolima">Tolima</option>
+          <option className="casillas" value="Valle del Cauca">Valle del Cauca</option>
+          <option className="casillas" value="Vaupés">Vaupés</option>
+          <option className="casillas" value="Vichada">Vichada</option>
         </select>
       </section>
 
-      <section className="form-group">
+      <section className="tituloCasilla form-group">
         <label className="control-label">ciudad</label>
         <select className="form-control" id="ciudad">
-          <option value="">-seleccionar-</option>
-          <option value="Arauca">Arauca</option>
-          <option value="Armenia">Armenia</option>
-          <option value="Barranquilla">Barranquilla</option>
-          <option value="Bogotá">Bogotá</option>
-          <option value="Bucaramanga">Bucaramanga</option>
-          <option value="Cali">Cali</option>
-          <option value="Cartagena">Cartagena</option>
-          <option value="Cúcuta">Cúcuta</option>
-          <option value="Florencia">Florencia</option>
-          <option value="Ibagué">Ibagué</option>
-          <option value="Leticia">Leticia</option>
-          <option value="Manizales">Manizales</option>
-          <option value="Medellín">Medellín</option>
-          <option value="Mitú">Mitú</option>
-          <option value="Mocoa">Mocoa</option>
-          <option value="Montería">Montería</option>
-          <option value="Neiva">Neiva</option>
-          <option value="Pasto">Pasto</option>
-          <option value="Pereira">Pereira</option>
-          <option value="Popayán">Popayán</option>
-          <option value="Puerto Carreño">Puerto Carreño</option>
-          <option value="Puerto Inírida">Puerto Inírida</option>
-          <option value="Quibdó">Quibdó</option>
-          <option value="Riohacha">Riohacha</option>
-          <option value="San Andrés">San Andrés</option>
-          <option value="San José del Guaviare">San José del Guaviare</option>
-          <option value="Santa Marta">Santa Marta</option>
-          <option value="Sincelejo">Sincelejo</option>
-          <option value="Tunja">Tunja</option>
-          <option value="Valledupar">Valledupar</option>
-          <option value="Villavicencio">Villavicencio</option>
-          <option value="Yopal">Yopal</option>
+          <option className="casillas" value="">-seleccionar-</option>
+          <option className="casillas" value="Arauca">Arauca</option>
+          <option className="casillas" value="Armenia">Armenia</option>
+          <option className="casillas" value="Barranquilla">Barranquilla</option>
+          <option className="casillas" value="Bogotá">Bogotá</option>
+          <option className="casillas" value="Bucaramanga">Bucaramanga</option>
+          <option className="casillas" value="Cali">Cali</option>
+          <option className="casillas" value="Cartagena">Cartagena</option>
+          <option className="casillas" value="Cúcuta">Cúcuta</option>
+          <option className="casillas" value="Florencia">Florencia</option>
+          <option className="casillas" value="Ibagué">Ibagué</option>
+          <option className="casillas" value="Leticia">Leticia</option>
+          <option className="casillas" value="Manizales">Manizales</option>
+          <option className="casillas" value="Medellín">Medellín</option>
+          <option className="casillas" value="Mitú">Mitú</option>
+          <option className="casillas" value="Mocoa">Mocoa</option>
+          <option className="casillas" value="Montería">Montería</option>
+          <option className="casillas" value="Neiva">Neiva</option>
+          <option className="casillas" value="Pasto">Pasto</option>
+          <option className="casillas" value="Pereira">Pereira</option>
+          <option className="casillas" value="Popayán">Popayán</option>
+          <option className="casillas" value="Puerto Carreño">Puerto Carreño</option>
+          <option className="casillas" value="Puerto Inírida">Puerto Inírida</option>
+          <option className="casillas" value="Quibdó">Quibdó</option>
+          <option className="casillas" value="Riohacha">Riohacha</option>
+          <option className="casillas" value="San Andrés">San Andrés</option>
+          <option className="casillas" value="San José del Guaviare">San José del Guaviare</option>
+          <option className="casillas" value="Santa Marta">Santa Marta</option>
+          <option className="casillas" value="Sincelejo">Sincelejo</option>
+          <option className="casillas" value="Tunja">Tunja</option>
+          <option className="casillas" value="Valledupar">Valledupar</option>
+          <option className="casillas" value="Villavicencio">Villavicencio</option>
+          <option className="casillas" value="Yopal">Yopal</option>
         </select>
       </section>
 
-      <section className="form-group">
+      <section className="tituloCasilla form-group">
         <label className="control-label">marca</label>
         <select className="form-control" id="marca">
-          <option value="">-seleccionar-</option>
-          <option value="Americanino">Americanino</option>
-          <option value="American Eagle">American Eagle</option>
-          <option value="Chevignon">Chevignon</option>
-          <option value="Esprit">Esprit</option>
-          <option value="Naf Naf">Naf Naf</option>
-          <option value="rifle">rifle</option>
+          <option className="casillas" value="">-seleccionar-</option>
+          <option className="casillas" value="Americanino">Americanino</option>
+          <option className="casillas" value="American Eagle">American Eagle</option>
+          <option className="casillas" value="Chevignon">Chevignon</option>
+          <option className="casillas" value="Esprit">Esprit</option>
+          <option className="casillas" value="Naf Naf">Naf Naf</option>
+          <option className="casillas" value="rifle">rifle</option>
         </select>
       </section>
-
+      </fieldset>
     
 
-      <section className="form-group">
+      <section className="tituloCasilla form-group">
         <button type="submit" className="btn btn-primary">
           Registrarse
         </button>
