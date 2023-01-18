@@ -1,7 +1,8 @@
 body{
-    background-color: rgb(233, 240, 134) !important;
+    
+    background-color: #ffffff !important;
     display: flex !important;
-    flex-direction: column !important;
+    /* flex-direction: column !important; */
     align-items: center !important;
     height: 100% !important;
     width: 100vw !important;

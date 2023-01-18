@@ -1,11 +1,11 @@
 const FormularioCliente = () => {
   return (
-    <form class="row g-3 w-70 col-12">
-      <section class="col-md-6">
-        <label class="form-label">
+    <form className="row g-3 w-70 col-12">
+      <section className="col-md-6">
+        <label className="form-label">
         tipo de identificacion
         </label>
-        <select class="form-select" id="tipoIdentificacion" required>
+        <select className="form-select" id="tipoIdentificacion" required>
           <option selected disabled value="" className="casillas">
            -seleccionar-
           </option>
@@ -15,13 +15,13 @@ const FormularioCliente = () => {
         </select>
       </section>
 
-      <section class="col-md-6">
-        <label class="form-label">
+      <section className="col-md-6">
+        <label className="form-label">
         numero de identificacion
         </label>
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           id="numeroDeIdentificacion"
           name="numeroDeIdentificacion"
           placeholder="##########"
@@ -29,13 +29,13 @@ const FormularioCliente = () => {
         />
       </section>
 
-      <section class="col-md-6">
-        <label class="form-label">
+      <section className="col-md-6">
+        <label className="form-label">
           nombre
         </label>
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           id="nombre"
           name="nombre"
           placeholder="John"
@@ -43,13 +43,13 @@ const FormularioCliente = () => {
         />
       </section>
 
-      <section class="col-md-6">
-        <label class="form-label">
+      <section className="col-md-6">
+        <label className="form-label">
           apellido
         </label>
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           id="apellido"
           name="apellido"
           placeholder="uribe"
@@ -57,26 +57,26 @@ const FormularioCliente = () => {
         />
       </section>
 
-      <section class="col-md-6">
-        <label class="form-label">
+      <section className="col-md-6">
+        <label className="form-label">
         fecha de nacimiento
         </label>
         <input
           type="date"
-          class="form-control"
+          className="form-control"
           id="fechaDeNacimiento"
           name="fechaDeNacimiento"
           required
         />
       </section>
 
-      <section class="col-md-6">
-        <label class="form-label">
+      <section className="col-md-6">
+        <label className="form-label">
         direccion
         </label>
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           id="direccion"
           name="direccion"
           placeholder="calle 75a sur #44-25"
@@ -84,11 +84,11 @@ const FormularioCliente = () => {
         />
       </section>
 
-      <section class="col-md-3">
-        <label class="form-label">
+      <section className="col-md-3">
+        <label className="form-label">
           pais
         </label>
-        <select class="form-select" id="pais" required>
+        <select className="form-select" id="pais" required>
           <option selected disabled value=""  className="casillas">
           -seleccionar-
           </option>
@@ -96,11 +96,11 @@ const FormularioCliente = () => {
         </select>
       </section>
 
-      <section class="col-md-3">
-        <label class="form-label">
+      <section className="col-md-3">
+        <label className="form-label">
         departamento
         </label>
-        <select class="form-select" id="departamento" required>
+        <select className="form-select" id="departamento" required>
           <option selected disabled value=""  className="casillas">
           -seleccionar-
           </option>
@@ -141,11 +141,11 @@ const FormularioCliente = () => {
         </select>
       </section>
 
-      <section class="col-md-3">
-        <label class="form-label">
+      <section className="col-md-3">
+        <label className="form-label">
         ciudad
         </label>
-        <select class="form-select" id="ciudad" required>
+        <select className="form-select" id="ciudad" required>
           <option selected disabled value=""  className="casillas">
           -seleccionar-
           </option>
@@ -184,11 +184,11 @@ const FormularioCliente = () => {
         </select>
       </section>
 
-      <section class="col-md-3">
-        <label class="form-label">
+      <section className="col-md-3">
+        <label className="form-label">
         marca
         </label>
-        <select class="form-select" id="marca" required>
+        <select className="form-select" id="marca" required>
           <option selected disabled value=""  className="casillas">
           -seleccionar-
           </option>
@@ -201,8 +201,8 @@ const FormularioCliente = () => {
         </select>
       </section>
       
-      <section class="col-12 d-flex justify-content-center">
-        <button class="btn btn-primary" type="submit">
+      <section className="col-12 d-flex justify-content-center">
+        <button className="btn btn-primary registrar" type="submit">
           Registrar
         </button>
       </section>
