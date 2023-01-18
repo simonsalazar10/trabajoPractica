@@ -1,25 +1,75 @@
+import React, {useState, useEffect} from "react"
+import axios from "axios"
 const FormularioCliente = () => {
-  return (
-    <form className="row g-3 w-70 col-12">
+const uriClientes = "http://localhost:3100/clientes"
+
+const [tipoIdentificacion, setTipoIdentificacion]=useState("")
+const [numeroDeIdentificacion, setNumeroDeIdentificacion]=useState("")
+const [nombre, setNombre]=useState("")
+const [apellido, setApellido]=useState("")
+const [fechaDeNacimiento, setFechaDeNacimiento]=useState("")
+const [direccion, setDireccion]=useState("")  
+const [pais, setPais]=useState("")  
+const [departamento, setDepartamento]=useState("")  
+const [ciudad, setCiudad]=useState("")  
+const [marca, setMarca]=useState("")  
+  
+const GuardarCliente = async (e) =>{
+  try {
+    const respuesta = await axios.post(uriClientes, {
+      "tipoIdentificacion": tipoIdentificacion,
+      "numeroIdentificacion": numeroDeIdentificacion,
+      "nombre": nombre,
+      "apellido": apellido,
+      "fechaNacimiento": fechaDeNacimiento,
+      "direccion": direccion,
+      "ciudad": ciudad,
+      "departamento": departamento,
+      "pais": pais,
+      "marca": marca
+    }
+      
+      )
+      console.log("cliente agregado con exito")
+  } catch (error) {
+    console.log("no fue posible guardar cliente" + error) 
+  }
+}
+  
+  
+  
+  
+  
+  
+  
+
+  
+return (
+    <form onSubmit={GuardarCliente} className="row g-3 w-70 col-12">
       <section className="col-md-6">
         <label className="form-label">
         tipo de identificacion
         </label>
-        <select className="form-select" id="tipoIdentificacion" required>
-          <option selected disabled value="" className="casillas">
+        <select value={tipoIdentificacion} onChange={(e)=>{
+         setTipoIdentificacion (e.target.value)
+        }} className="form-select" id="tipoIdentificacion" required>
+          <option defaultValue="" className="casillas">
            -seleccionar-
           </option>
           <option className="casillas" value="CC">Cedula</option>
           <option className="casillas" value="TI">Tarjeta de identidad</option>
           <option className="casillas" value="CE">Cedula de extranjeria</option>
         </select>
+        {console.log(tipoIdentificacion)}
       </section>
 
       <section className="col-md-6">
         <label className="form-label">
         numero de identificacion
         </label>
-        <input
+        <input value={numeroDeIdentificacion} onChange={(e)=>{
+         setNumeroDeIdentificacion (e.target.value)
+        }}
           type="text"
           className="form-control"
           id="numeroDeIdentificacion"
@@ -27,13 +77,16 @@ const FormularioCliente = () => {
           placeholder="##########"
           required
         />
+        {console.log(numeroDeIdentificacion)}
       </section>
 
       <section className="col-md-6">
         <label className="form-label">
           nombre
         </label>
-        <input
+        <input value={nombre} onChange={(e)=>{
+         setNombre (e.target.value)
+        }}
           type="text"
           className="form-control"
           id="nombre"
@@ -41,13 +94,16 @@ const FormularioCliente = () => {
           placeholder="John"
           required
         />
+        {console.log(nombre)}
       </section>
 
       <section className="col-md-6">
         <label className="form-label">
           apellido
         </label>
-        <input
+        <input value={apellido} onChange={(e)=>{
+         setApellido (e.target.value)
+        }}
           type="text"
           className="form-control"
           id="apellido"
@@ -55,26 +111,32 @@ const FormularioCliente = () => {
           placeholder="uribe"
           required
         />
+        {console.log(apellido)}
       </section>
 
       <section className="col-md-6">
         <label className="form-label">
         fecha de nacimiento
         </label>
-        <input
+        <input value={fechaDeNacimiento} onChange={(e)=>{
+         setFechaDeNacimiento (e.target.value)
+        }}
           type="date"
           className="form-control"
           id="fechaDeNacimiento"
           name="fechaDeNacimiento"
           required
         />
+        {console.log(fechaDeNacimiento)}
       </section>
 
       <section className="col-md-6">
         <label className="form-label">
         direccion
         </label>
-        <input
+        <input value={direccion} onChange={(e)=>{
+         setDireccion (e.target.value)
+        }}
           type="text"
           className="form-control"
           id="direccion"
@@ -82,26 +144,32 @@ const FormularioCliente = () => {
           placeholder="calle 75a sur #44-25"
           required
         />
+        {console.log(direccion)}
       </section>
 
       <section className="col-md-3">
         <label className="form-label">
           pais
         </label>
-        <select className="form-select" id="pais" required>
-          <option selected disabled value=""  className="casillas">
+        <select value={pais} onChange={(e)=>{
+         setPais (e.target.value)
+        }} className="form-select" id="pais" required>
+          <option defaultValue=""  className="casillas">
           -seleccionar-
           </option>
           <option className="casillas" value="colombia">colombia</option>
         </select>
+        {console.log(pais)}
       </section>
 
       <section className="col-md-3">
         <label className="form-label">
         departamento
         </label>
-        <select className="form-select" id="departamento" required>
-          <option selected disabled value=""  className="casillas">
+        <select value={departamento} onChange={(e)=>{
+         setDepartamento (e.target.value)
+        }} className="form-select" id="departamento" required>
+          <option defaultValue=""  className="casillas">
           -seleccionar-
           </option>
           <option className="casillas" value="Amazonas">Amazonas</option>
@@ -139,14 +207,17 @@ const FormularioCliente = () => {
           <option className="casillas" value="Vaupés">Vaupés</option>
           <option className="casillas" value="Vichada">Vichada</option>
         </select>
+        {console.log(departamento)}
       </section>
 
       <section className="col-md-3">
         <label className="form-label">
         ciudad
         </label>
-        <select className="form-select" id="ciudad" required>
-          <option selected disabled value=""  className="casillas">
+        <select value={ciudad} onChange={(e)=>{
+         setCiudad (e.target.value)
+        }} className="form-select" id="ciudad" required>
+          <option defaultValue=""  className="casillas">
           -seleccionar-
           </option>
           <option className="casillas" value="Arauca">Arauca</option>
@@ -182,14 +253,17 @@ const FormularioCliente = () => {
           <option className="casillas" value="Villavicencio">Villavicencio</option>
           <option className="casillas" value="Yopal">Yopal</option>
         </select>
+        {console.log(ciudad)}
       </section>
 
       <section className="col-md-3">
         <label className="form-label">
         marca
         </label>
-        <select className="form-select" id="marca" required>
-          <option selected disabled value=""  className="casillas">
+        <select value={marca} onChange={(e)=>{
+         setMarca (e.target.value)
+        }} className="form-select" id="marca" required>
+          <option defaultValue=""  className="casillas">
           -seleccionar-
           </option>
           <option className="casillas" value="Americanino">Americanino</option>
@@ -199,6 +273,7 @@ const FormularioCliente = () => {
           <option className="casillas" value="Naf Naf">Naf Naf</option>
           <option className="casillas" value="rifle">rifle</option>
         </select>
+        {console.log(marca)}
       </section>
       
       <section className="col-12 d-flex justify-content-center">
