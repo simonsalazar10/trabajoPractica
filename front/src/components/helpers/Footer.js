@@ -6,12 +6,7 @@ const Footer = () => {
         <p className="about">
           <span> Grupo Uribe</span> El Grupo Uribe es un grupo textil colombiano, de tendencia familiar, fundado en 1907. El grupo tiene la representación, producción y comercialización para Colombia y el caribe de marcas internacionales como Chevignon, Naf Naf, Americanino, Esprit, Rifle, American Eagle, Mother Care, American Brands, LBT, entre otras.
         </p>
-        <section className="icons">
-          <img className="a" src="../../../public/instagram.png" alt="" />
-          <img className="a" src="../../../public/gorjeo.png" alt="" />
-          <img className="a" src="../../../public/facebook.png" alt="" />
-          <img className="a" src="../../../public/github.png" alt="" />
-        </section>
+
       </section>
       <section className="footer-center col-md-4 col-sm-6">
         <section>
@@ -47,10 +42,7 @@ const Footer = () => {
         <h2>
           {" "}
           John Uribe
-          <span>
-            {" "}
-            <img className="loguito" src="../../../public/ley.png" alt="" />
-          </span>
+          
         </h2>
 
         <p className="name">John Uribe e Hijos S.A. &copy;</p>

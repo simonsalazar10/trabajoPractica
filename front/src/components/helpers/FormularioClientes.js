@@ -37,18 +37,11 @@ const GuardarCliente = async (e) =>{
 }
   
   
-  
-  
-  
-  
-  
-
-  
 return (
     <form onSubmit={GuardarCliente} className="row g-3 w-70 col-12">
       <section className="col-md-6">
         <label className="form-label">
-        tipo de identificacion
+        Tipo de identificacion
         </label>
         <select value={tipoIdentificacion} onChange={(e)=>{
          setTipoIdentificacion (e.target.value)
@@ -65,7 +58,7 @@ return (
 
       <section className="col-md-6">
         <label className="form-label">
-        numero de identificacion
+        Numero de identificacion
         </label>
         <input value={numeroDeIdentificacion} onChange={(e)=>{
          setNumeroDeIdentificacion (e.target.value)
@@ -82,7 +75,7 @@ return (
 
       <section className="col-md-6">
         <label className="form-label">
-          nombre
+          Nombre
         </label>
         <input value={nombre} onChange={(e)=>{
          setNombre (e.target.value)
@@ -99,7 +92,7 @@ return (
 
       <section className="col-md-6">
         <label className="form-label">
-          apellido
+          Apellido
         </label>
         <input value={apellido} onChange={(e)=>{
          setApellido (e.target.value)
@@ -116,7 +109,7 @@ return (
 
       <section className="col-md-6">
         <label className="form-label">
-        fecha de nacimiento
+        Fecha de nacimiento
         </label>
         <input value={fechaDeNacimiento} onChange={(e)=>{
          setFechaDeNacimiento (e.target.value)
@@ -132,7 +125,7 @@ return (
 
       <section className="col-md-6">
         <label className="form-label">
-        direccion
+        Direccion
         </label>
         <input value={direccion} onChange={(e)=>{
          setDireccion (e.target.value)
@@ -149,7 +142,7 @@ return (
 
       <section className="col-md-3">
         <label className="form-label">
-          pais
+          Pais
         </label>
         <select value={pais} onChange={(e)=>{
          setPais (e.target.value)
@@ -157,14 +150,14 @@ return (
           <option defaultValue=""  className="casillas">
           -seleccionar-
           </option>
-          <option className="casillas" value="colombia">colombia</option>
+          <option className="casillas" value="colombia">Colombia</option>
         </select>
         {console.log(pais)}
       </section>
 
       <section className="col-md-3">
         <label className="form-label">
-        departamento
+        Departamento
         </label>
         <select value={departamento} onChange={(e)=>{
          setDepartamento (e.target.value)
@@ -212,7 +205,7 @@ return (
 
       <section className="col-md-3">
         <label className="form-label">
-        ciudad
+        Ciudad
         </label>
         <select value={ciudad} onChange={(e)=>{
          setCiudad (e.target.value)
@@ -258,7 +251,7 @@ return (
 
       <section className="col-md-3">
         <label className="form-label">
-        marca
+        Marca
         </label>
         <select value={marca} onChange={(e)=>{
          setMarca (e.target.value)
